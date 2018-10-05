@@ -2,13 +2,16 @@ const UNITS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']
 const TENS = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC']
 const HUNDREDS = ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM']
 
+
 function number_to_word(number){
   if (number < 10) {
     return units(number)
   } else if (number < 100) {
     return tens(number)
-  } else {
+  } else if (number < 1000) {
     return hundreds(number)
+  } else {
+    return "M"
   }
 }
 

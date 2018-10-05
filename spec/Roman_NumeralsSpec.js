@@ -65,4 +65,10 @@ describe('number_to_word', function(){
       expect(number_to_word(999)).toEqual('CMXCIX')
     });
   });
+
+  describe('return 1000', function() {
+    it('return 1000 as M', function() {
+      expect(number_to_word(1000)).toEqual('M')
+    });
+  });
 });
