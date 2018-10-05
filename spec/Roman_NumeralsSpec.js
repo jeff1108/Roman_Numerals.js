@@ -43,4 +43,26 @@ describe('number_to_word', function(){
       expect(number_to_word(99)).toEqual('XCIX')
     });
   });
+
+  describe('number 100-999', function() {
+    it('return 100 as C', function() {
+      expect(number_to_word(100)).toEqual('C')
+    });
+
+    it('return 101 as CI', function() {
+      expect(number_to_word(101)).toEqual('CI')
+    });
+
+    it('return 209 as CCIX', function() {
+      expect(number_to_word(209)).toEqual('CCIX')
+    });
+
+    it('return 555 as DLV', function() {
+      expect(number_to_word(555)).toEqual('DLV')
+    });
+
+    it('return 999 as CMXCIX', function() {
+      expect(number_to_word(999)).toEqual('CMXCIX')
+    });
+  });
 });
