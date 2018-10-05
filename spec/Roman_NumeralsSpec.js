@@ -1,4 +1,7 @@
 describe('number_to_word', function(){
+  it('throw error when number is lower than 1 or larger than 1000', function() {
+    expect(function() {number_to_word(0)}).toThrow(new Error('number needs to be 1 to 1000'))
+  })
 
   describe('numbers 1 to 9', function() {
     it('return 1 as I', function() {

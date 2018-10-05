@@ -4,7 +4,9 @@ const HUNDREDS = ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM']
 
 
 function number_to_word(number){
-  if (number < 10) {
+  if (number <= 0 || number > 1000) {
+    throw new Error('number needs to be 1 to 1000')
+  } else if (number < 10) {
     return units(number)
   } else if (number < 100) {
     return tens(number)
